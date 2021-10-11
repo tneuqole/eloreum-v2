@@ -4,11 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-discord = "*"
 python-dotenv = "*"
 boto3 = "*"
+pynacl = "*"
 
 [dev-packages]
+black = "==21.9b0"
+isort = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
+
+[scripts]
+format = "black ."
+sort = "isort --profile black ."
