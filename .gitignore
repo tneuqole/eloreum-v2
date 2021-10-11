@@ -1,3 +1,5 @@
 bot/.env
 .vscode
 bot/discord.log
+temp
+my-deployment-package.zip
