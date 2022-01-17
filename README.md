@@ -17,3 +17,14 @@ docker run -d --restart unless-stopped \
     
 docker run --restart unless-stopped -it -p 7777:7777 -v $HOME/terraria:/root/.local/share/Terraria/Worlds --name terraria ryshe/terraria:latest
 ```
+
+```
+docker pull itzg/minecraft-server:latest
+docker stop mc
+docker rm mc
+docker run -d --restart unless-stopped \
+    -v $HOME/minecraft-server:/data \
+    -p 25565:25565 \
+    -e TYPE=FABRIC -e EULA=TRUE -e MEMORY=7G \
+    --name mc itzg/minecraft-server:latest
+```
