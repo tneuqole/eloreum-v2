@@ -23,7 +23,7 @@ docker pull itzg/minecraft-server:latest
 docker stop mc
 docker rm mc
 docker run -d --restart unless-stopped \
-    -v $HOME/minecraft-server:/data \
+    -v /home/ec2-user/minecraft-server:/data \
     -p 25565:25565 \
     -e TYPE=FABRIC -e EULA=TRUE -e MEMORY=7G \
     --name mc itzg/minecraft-server:latest
